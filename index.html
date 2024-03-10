@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animowane Kafelki</title>
+<style>
+  /* Stylizacja tła strony */
+  body {
+    background: linear-gradient(to bottom right, #0b3931, #185a58);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #FFCB8A; /* Kolor tekstu */
+  }
+
+  /* Kontener kafelków */
+  .tiles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Stylizacja kafelków */
+  .tile {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom right, #116466, #0c4441); /* Kolor kafelka */
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.5s ease;
+  }
+
+  /* Animacja przy najechaniu na kafelek */
+  .tile:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to bottom right, #0e554f, #0a3633); /* Ciemniejszy kolor kafelka */
+  }
+
+  /* Stylizacja tekstu wewnątrz kafelków */
+  h2 {
+    color: #D9B08C; /* Kolor tekstu */
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Kontener kafelków -->
+<div class="tiles-container">
+  <!-- Kafelek 1 -->
+  <div class="tile" onclick="window.location.href = 'podstrona1.html';">
+    <h2>Kafelek 1</h2>
+  </div>
+
+  <!-- Kafelek 2 -->
+  <div class="tile" onclick="window.location.href = 'podstrona2.html';">
+    <h2>Kafelek 2</h2>
+  </div>
+
+  <!-- Kafelek 3 -->
+  <div class="tile" onclick="window.location.href = 'podstrona3.html';">
+    <h2>Kafelek 3</h2>
+  </div>
+
+  <!-- Kafelek 4 -->
+  <div class="tile" onclick="window.location.href = 'podstrona4.html';">
+    <h2>Kafelek 4</h2>
+  </div>
+
+  <!-- Kafelek 5 -->
+  <div class="tile" onclick="window.location.href = 'podstrona5.html';">
+    <h2>Kafelek 5</h2>
+  </div>
+</div>
+
+</body>
+</html>
