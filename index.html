@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Dodano flex-wrap dla automatycznego zawijania kafelków */
+    flex-wrap: wrap; /* Automatyczne zawijanie kafelków */
   }
 
   /* Stylizacja kafelków */
@@ -49,6 +49,33 @@
   h2 {
     color: #D9B08C; /* Kolor tekstu */
     font-size: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Responsywność dla mniejszych ekranów */
+  @media (max-width: 768px) {
+    .tile {
+      width: 150px;
+      height: 150px;
+      margin: 15px;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .tile {
+      width: 120px;
+      height: 120px;
+      margin: 10px;
+    }
+
+    h2 {
+      font-size: 14px;
+    }
   }
 </style>
 </head>
@@ -58,7 +85,7 @@
 <div class="tiles-container">
   <!-- Kafelek 1 -->
   <div class="tile" onclick="window.location.href = 'walentynki.index.html';">
-    <h2>Waletynki</h2>
+    <h2>Walentynki</h2>
   </div>
 
   <!-- Kafelek 2 -->
@@ -89,6 +116,21 @@
   <!-- Kafelek 7 -->
   <div class="tile" onclick="window.location.href = 'zadanie9.index.html';">
     <h2>Zadanie 9</h2>
+  </div>
+
+  <!-- Kafelek 8 -->
+  <div class="tile" onclick="window.location.href = 'zadanie10.index.html';">
+    <h2>Zadanie 10</h2>
+  </div>
+
+  <!-- Kafelek 9 -->
+  <div class="tile" onclick="window.location.href = 'zadanie11.index.html';">
+    <h2>Zadanie 11</h2>
+  </div>
+
+  <!-- Kafelek 10 -->
+  <div class="tile" onclick="window.location.href = 'zadanie12.index.html';">
+    <h2>Zadanie 12</h2>
   </div>
 </div>
 
