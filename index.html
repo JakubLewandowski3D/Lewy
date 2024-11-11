@@ -22,6 +22,8 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; /* Automatyczne zawijanie kafelków */
+    gap: 20px; /* Odstęp między kafelkami */
+    transition: all 0.3s ease;
   }
 
   /* Stylizacja kafelków */
@@ -77,12 +79,31 @@
       font-size: 14px;
     }
   }
+
+  /* Stylizacja przycisku do zwijania kafelków */
+  .toggle-button {
+    background-color: #116466;
+    color: #FFCB8A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .toggle-button:hover {
+    background-color: #0e554f;
+  }
 </style>
 </head>
 <body>
 
+<!-- Przycisk do zwijania/kafelków -->
+<button class="toggle-button" onclick="toggleTiles()">Pokaż/Ukryj kafelki</button>
+
 <!-- Kontener kafelków -->
-<div class="tiles-container">
+<div class="tiles-container" id="tiles-container">
   <!-- Kafelek 1 -->
   <div class="tile" onclick="window.location.href = 'walentynki.index.html';">
     <h2>Walentynki</h2>
@@ -132,7 +153,24 @@
   <div class="tile" onclick="window.location.href = 'zadanie12.index.html';">
     <h2>Zadanie 12</h2>
   </div>
+
+  <!-- Kafelek 11 - Zadanie 13 -->
+  <div class="tile" onclick="window.location.href = 'zadanie13.index.html';">
+    <h2>Zadanie 13</h2>
+  </div>
 </div>
+
+<script>
+// Funkcja do zwijania i rozwijania kafelków
+function toggleTiles() {
+  var tilesContainer = document.getElementById("tiles-container");
+  if (tilesContainer.style.display === "none") {
+    tilesContainer.style.display = "flex"; // Pokazuje kafelki
+  } else {
+    tilesContainer.style.display = "none"; // Ukrywa kafelki
+  }
+}
+</script>
 
 </body>
 </html>
